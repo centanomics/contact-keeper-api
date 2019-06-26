@@ -11,9 +11,13 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import NotFound from './components/pages/NotFound';
 
+import setAuthToken from './utils/setAuthToken';
+
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import './App.css';
+
+if (localStorage.token) setAuthToken(localStorage.token);
 
 const App = () => {
   return (
